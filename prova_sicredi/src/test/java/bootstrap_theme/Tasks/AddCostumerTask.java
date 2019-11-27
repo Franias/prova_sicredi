@@ -87,6 +87,6 @@ public class AddCostumerTask {
 		String countryActual = addCostumerAppObject.getCountryTextField().getAttribute("value");
 		assertEquals(countryExpected, countryActual);
 		
-		ScreenshotFw.takeFullPageShot(driver, "confirmData");
+		ScreenshotFw.takeViewpointShot(driver, "confirmData");
 	}
 }
