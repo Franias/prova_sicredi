@@ -66,7 +66,16 @@ public class AddCostumerAppObject {
 		WaitElementFw.visibilityOfElementLocated(driver, By.id("field-country"));
 		return driver.findElement(By.id("field-country"));
 	}
-	
+	//
+	public WebElement getEmployeerButton() {
+		WaitElementFw.visibilityOfElementLocated(driver, By.xpath("//span[text()='Select from Employeer']"));
+		return driver.findElement(By.xpath("//span[text()='Select from Employeer']"));
+	}
+	public WebElement getEmployeerTextField() {
+		WaitElementFw.visibilityOfElementLocated(driver, By.xpath("//input[@autocomplete='off']"));
+		return driver.findElement(By.xpath("//input[@autocomplete='off']"));
+	}	
+//	
 	public Select getEmployeerComboBox() {
 		WaitElementFw.elementToBeClickable(driver, By.id("field-salesRepEmployeeNumber"));
 		return new Select(this.driver.findElement(By.id("field-salesRepEmployeeNumber")));

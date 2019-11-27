@@ -20,5 +20,6 @@ public class AddCostumerTestCase extends BaseTestFw {
 	@Test
 	public void save() {		
 		addCostumerTask.AddCostumer();
+		
 	}
 }

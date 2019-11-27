@@ -1,5 +1,6 @@
 package bootstrap_theme.Tasks;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import bootstrap_theme.AppObjects.AddCostumerAppObject;
@@ -10,7 +11,7 @@ public class AddCostumerTask {
 	
 	public AddCostumerTask(WebDriver driver){
 		this.driver = driver;
-		this.addCostumerAppObject = new AddCostumerAppObject(driver);
+		addCostumerAppObject = new AddCostumerAppObject(driver);
 	}
 	
 	public void AddCostumer(){		
@@ -27,12 +28,13 @@ public class AddCostumerTask {
 		addCostumerAppObject.getStateTextField().sendKeys("RS");
 		addCostumerAppObject.getPostalCodeTextField().sendKeys("91000-000");
 		addCostumerAppObject.getCountryTextField().sendKeys("Brasil");
-		addCostumerAppObject.getEmployeerComboBox().selectByValue("1611");
-		addCostumerAppObject.getCreditLimitTextField().sendKeys("200");
+		addCostumerAppObject.getCountryTextField().sendKeys(Keys.TAB);
 		
+		addCostumerAppObject.getEmployeerButton().click();
+		addCostumerAppObject.getEmployeerTextField().click();
+		addCostumerAppObject.getEmployeerTextField().sendKeys("Fixter");
+		addCostumerAppObject.getEmployeerTextField().sendKeys(Keys.ENTER);		
+		addCostumerAppObject.getCreditLimitTextField().sendKeys("200");		
 		addCostumerAppObject.getSaveButton().click();
-	}
-	
-	
-	
+	}	
 }
