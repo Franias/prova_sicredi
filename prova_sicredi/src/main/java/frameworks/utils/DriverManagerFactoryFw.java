@@ -16,7 +16,7 @@ public class DriverManagerFactoryFw {
 				WebDriverManager.chromedriver().setup();
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("start-maximized");
-				option.addArguments("--window-size(1024,768)");
+				option.addArguments("--window-size(1280,800");
 				DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 				capabilities.setCapability(ChromeOptions.CAPABILITY, option);
 				

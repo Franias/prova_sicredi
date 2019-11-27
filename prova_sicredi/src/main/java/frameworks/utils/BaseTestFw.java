@@ -16,7 +16,7 @@ private static WebDriver driver;
 	
 	@AfterClass
 	public static void tearDown() {
-		quitDriver();
+		quitDriver()/;
 	}
 
 }

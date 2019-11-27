@@ -14,11 +14,11 @@ public class AddCostumerTestCase extends BaseTestFw {
 
 	@Before
 	public void setUp() {
-		driver.get("http://www.phptravels.net/");
+		driver.get("https://www.grocerycrud.com/demo/bootstrap_theme_v4");
 	}
 	
 	@Test
-	public void reservar() {		
+	public void save() {		
 		addCostumerTask.AddCostumer();
 	}
 }

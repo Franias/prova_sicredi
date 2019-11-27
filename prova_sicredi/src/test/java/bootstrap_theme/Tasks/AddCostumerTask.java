@@ -13,8 +13,26 @@ public class AddCostumerTask {
 		this.addCostumerAppObject = new AddCostumerAppObject(driver);
 	}
 	
-	public void AddCostumer(){
+	public void AddCostumer(){		
+//		LEMBRAR DE DESOCMENTAR O SELECT E MUDAR A URL
+//		addCostumerAppObject.getThemeComboBox().selectByVisibleText("Bootstrap V4 Theme");
+		addCostumerAppObject.getAddCostumerButton().click();
+		addCostumerAppObject.getCostumerNameTextField().sendKeys("Teste Sicredi");
+		addCostumerAppObject.getLastNameTextField().sendKeys("Teste");
+		addCostumerAppObject.getContactNameTextField().sendKeys("Francielli");
+		addCostumerAppObject.getPhoneTextField().sendKeys("51 9999-9999");
+		addCostumerAppObject.getAdress1TextField().sendKeys("Av Assis Brasil, 3970");
+		addCostumerAppObject.getAdress2TextField().sendKeys("Torre D");
+		addCostumerAppObject.getCityTextField().sendKeys("Porto Alegre");
+		addCostumerAppObject.getStateTextField().sendKeys("RS");
+		addCostumerAppObject.getPostalCodeTextField().sendKeys("91000-000");
+		addCostumerAppObject.getCountryTextField().sendKeys("Brasil");
+		addCostumerAppObject.getEmployeerComboBox().selectByValue("1611");
+		addCostumerAppObject.getCreditLimitTextField().sendKeys("200");
 		
-		
+		addCostumerAppObject.getSaveButton().click();
 	}
+	
+	
+	
 }
