@@ -7,13 +7,14 @@ Projeto de teste de software com automação de processos e testes
 Branch Develop
 
 Arquitetura:
+
 |-Suites
 
-|--TestCases
+   |--TestCases
 
-|---Tasks
+      |---Tasks
 
-|----App Objects
+         |----App Objects
 Gerenciador de dependencias:  Maven
 
 Código em: Java versão 8
