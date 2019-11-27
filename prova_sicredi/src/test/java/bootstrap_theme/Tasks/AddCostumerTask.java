@@ -21,7 +21,6 @@ public class AddCostumerTask {
 			String Phone, String Adress1, String Adress2, String City, String State,
 			String PostalCode, String Country, String Employeer, String CreditLimit){		
 //		LEMBRAR DE DESOCMENTAR O SELECT E MUDAR A URL
-//		addCostumerAppObject.getThemeComboBox().selectByVisibleText("Bootstrap V4 Theme");
 		addCostumerAppObject.getAddCostumerButton().click();
 		addCostumerAppObject.getCostumerNameTextField().sendKeys(CostumerName);
 		addCostumerAppObject.getLastNameTextField().sendKeys(LastName);

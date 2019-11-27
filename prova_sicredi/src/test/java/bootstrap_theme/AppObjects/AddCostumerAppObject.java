@@ -12,17 +12,11 @@ public class AddCostumerAppObject {
 	public AddCostumerAppObject(WebDriver driver) {
 		 this.driver = driver;
 	}
-//	
 
-	public Select getThemeComboBox() {
-		WaitElementFw.elementToBeClickable(driver, By.xpath("//select[@onchange='switchVersionSelect()']"));
-		return new Select(this.driver.findElement(By.xpath("//select[@onchange='switchVersionSelect()']")));
-	}
 	public WebElement getAddCostumerButton() {
 		WaitElementFw.elementToBeClickable(driver, By.xpath("//a[@href='/demo/bootstrap_theme_v4/add']"));
 		return driver.findElement(By.xpath("//a[@href='/demo/bootstrap_theme_v4/add']"));
 	}
-	//page /add
 	public WebElement getCostumerNameTextField() {
 		WaitElementFw.visibilityOfElementLocated(driver, By.id("field-customerName"));
 		return driver.findElement(By.id("field-customerName"));
