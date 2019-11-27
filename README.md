@@ -8,11 +8,11 @@ Branch Develop
 
 Arquitetura:
 
-|-Suites
+    |-Suites
 
-   |--TestCases
+      |--TestCases
 
-      |---Tasks
+        |---Tasks
 
          |----App Objects
 Gerenciador de dependencias:  Maven
