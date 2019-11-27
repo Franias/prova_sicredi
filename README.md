@@ -8,13 +8,13 @@ Branch Develop
 
 Arquitetura:
 
-    |-Suites
+    |-Suites (all testes cases)
 
-      |--TestCases
+      |--TestCases (test cases)
 
-        |---Tasks
+        |---Tasks (tasks with functionality)
 
-         |----App Objects
+         |----App Objects (pageObjects)
 Gerenciador de dependencias:  Maven
 
 Código em: Java versão 8
