@@ -60,13 +60,11 @@ public class AddCostumerAppObject {
 	public WebElement getPostalCodeTextField() {
 		WaitElementFw.visibilityOfElementLocated(driver, By.id("field-postalCode"));
 		return driver.findElement(By.id("field-postalCode"));
-	}
-	
+	}	
 	public WebElement getCountryTextField() {
 		WaitElementFw.visibilityOfElementLocated(driver, By.id("field-country"));
 		return driver.findElement(By.id("field-country"));
 	}
-	//
 	public WebElement getEmployeerButton() {
 		WaitElementFw.visibilityOfElementLocated(driver, By.xpath("//span[text()='Select from Employeer']"));
 		return driver.findElement(By.xpath("//span[text()='Select from Employeer']"));
@@ -75,22 +73,23 @@ public class AddCostumerAppObject {
 		WaitElementFw.visibilityOfElementLocated(driver, By.xpath("//input[@autocomplete='off']"));
 		return driver.findElement(By.xpath("//input[@autocomplete='off']"));
 	}	
-//	
-	public Select getEmployeerComboBox() {
-		WaitElementFw.elementToBeClickable(driver, By.id("field-salesRepEmployeeNumber"));
-		return new Select(this.driver.findElement(By.id("field-salesRepEmployeeNumber")));
-	}
-	
-	
-	
 	public WebElement getCreditLimitTextField() {
 		return driver.findElement(By.id("field-creditLimit"));
 	}
 	public WebElement getSaveButton() {
 		return driver.findElement(By.id("form-button-save"));
 	}
+	public WebElement getReportSucess() {
+		WaitElementFw.visibilityOfElementLocated(driver, By.xpath("//div[@id='report-success']/p"));
+		return driver.findElement(By.xpath("//div[@id='report-success']/p"));
+	}
 	
 	
+	//edit
+	public WebElement getEditButton() {
+		WaitElementFw.elementToBeClickable(driver, By.className("go-to-edit-form"));
+		return driver.findElement(By.className("go-to-edit-form"));
+	}
 	
 	
 	

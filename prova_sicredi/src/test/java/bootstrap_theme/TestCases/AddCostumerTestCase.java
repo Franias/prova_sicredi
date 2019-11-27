@@ -19,7 +19,9 @@ public class AddCostumerTestCase extends BaseTestFw {
 	
 	@Test
 	public void save() {		
-		addCostumerTask.AddCostumer();
-		
+		addCostumerTask.AddNewCostumer("Teste Sicredi","Teste","Francielli","51 9999-9999",
+				"Av Assis Brasil, 3970","Torre D", "Porto Alegre","RS","91000-000","Brasil", "Fixter", "200");
+		addCostumerTask.confirmData("Teste Sicredi","Teste","Francielli","51 9999-9999",
+				"Av Assis Brasil, 3970","Torre D", "Porto Alegre","RS","91000-000","Brasil","200");
 	}
 }
