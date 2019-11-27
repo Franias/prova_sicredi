@@ -40,8 +40,11 @@ public class AddCostumerTask {
 		addCostumerAppObject.getSaveButton().click();
 		
 		
-		//edit
-		addCostumerAppObject.getEditButton().click();
+		addCostumerAppObject.getReportSucess();
+		String actual = addCostumerAppObject.getReportSucess().getText();
+		System.out.println(actual);
+		assertEquals("Your data has been successfully stored into the database. Edit Customer or Go back to list", actual);
+
 	}	
 	public void confirmData(String CostumerName, String LastName, String FirstName,
 		String Phone, String Adress1, String Adress2, String City, String State,
