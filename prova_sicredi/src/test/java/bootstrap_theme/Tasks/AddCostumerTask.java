@@ -1,9 +1,12 @@
 package bootstrap_theme.Tasks;
 
+import static org.junit.Assert.assertEquals;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import static org.junit.Assert.assertEquals;
+
 import bootstrap_theme.AppObjects.AddCostumerAppObject;
+import frameworks.utils.ScreenshotFw;
 
 public class AddCostumerTask {
 	private WebDriver driver;
@@ -14,7 +17,7 @@ public class AddCostumerTask {
 		addCostumerAppObject = new AddCostumerAppObject(driver);
 	}
 	
-	public void AddNewCostumer(String CostumerName, String LastName, String FirstName,
+	public void addNewCostumer(String CostumerName, String LastName, String FirstName,
 			String Phone, String Adress1, String Adress2, String City, String State,
 			String PostalCode, String Country, String Employeer, String CreditLimit){		
 //		LEMBRAR DE DESOCMENTAR O SELECT E MUDAR A URL
@@ -44,14 +47,14 @@ public class AddCostumerTask {
 		String actual = addCostumerAppObject.getReportSucess().getText();
 		System.out.println(actual);
 		assertEquals("Your data has been successfully stored into the database. Edit Customer or Go back to list", actual);
-
+		
+		ScreenshotFw.takeViewpointShot(driver, "addNewCostumer");
 	}	
 	public void confirmData(String CostumerName, String LastName, String FirstName,
 		String Phone, String Adress1, String Adress2, String City, String State,
 		String PostalCode, String Country, String CreditLimit) {
 		
-		addCostumerAppObject.getEditButton().click();
-		
+		addCostumerAppObject.getEditButton().click();		
 		String costumerNameExpected = "Teste Sicredi";			
 		String lastNameExpected = "Teste";
 		String contactNameExpected = "Francielli";
@@ -83,5 +86,7 @@ public class AddCostumerTask {
 		assertEquals(postalExpected, postalActual);
 		String countryActual = addCostumerAppObject.getCountryTextField().getAttribute("value");
 		assertEquals(countryExpected, countryActual);
+		
+		ScreenshotFw.takeFullPageShot(driver, "addNewCostumer");
 	}
 }
