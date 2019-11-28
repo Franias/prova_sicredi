@@ -1,10 +1,8 @@
 # prova_sicredi 
 
-## PROJETO ESTÁ NA BRANCH DEVELOP (git error git add/rm)
-
 Projeto de teste de software com automação de processos e testes
 
-Branch Develop
+Branch MASTER
 
 Arquitetura:
 
