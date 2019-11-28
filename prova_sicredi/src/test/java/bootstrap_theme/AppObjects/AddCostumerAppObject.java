@@ -12,7 +12,12 @@ public class AddCostumerAppObject {
 	public AddCostumerAppObject(WebDriver driver) {
 		 this.driver = driver;
 	}
-
+	
+	public Select getSelectComboBox() {
+		WaitElementFw.visibilityOfElementLocated(driver, By.id("switch-version-select"));
+		return new Select(this.driver.findElement(By.id("switch-version-select")));
+	}
+	
 	public WebElement getAddCostumerButton() {
 		WaitElementFw.elementToBeClickable(driver, By.xpath("//a[@href='/demo/bootstrap_theme_v4/add']"));
 		return driver.findElement(By.xpath("//a[@href='/demo/bootstrap_theme_v4/add']"));
@@ -77,15 +82,9 @@ public class AddCostumerAppObject {
 		WaitElementFw.visibilityOfElementLocated(driver, By.xpath("//div[@id='report-success']/p"));
 		return driver.findElement(By.xpath("//div[@id='report-success']/p"));
 	}
-	
-	
-	//edit
 	public WebElement getEditButton() {
 		WaitElementFw.elementToBeClickable(driver, By.className("go-to-edit-form"));
 		return driver.findElement(By.className("go-to-edit-form"));
-	}
-	
-	
-	
+	}	
 	
 }

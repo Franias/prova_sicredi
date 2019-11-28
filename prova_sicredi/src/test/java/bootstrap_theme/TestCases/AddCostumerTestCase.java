@@ -14,7 +14,7 @@ public class AddCostumerTestCase extends BaseTestFw {
 
 	@Before
 	public void setUp() {
-		driver.get("https://www.grocerycrud.com/demo/bootstrap_theme_v4");
+		driver.get("https://www.grocerycrud.com/demo/bootstrap_theme");
 	}
 	
 	@Test
